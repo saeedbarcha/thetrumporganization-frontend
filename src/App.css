@@ -1,0 +1,289 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.Header-layout {
+  width: 100%;
+}
+
+.main-layout-container {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 8.5rem;
+}
+
+.layout-left {
+  width: 67%;
+}
+
+.layout-right {
+  width: 31%;
+}
+
+.btn-info {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #0dcaf0;
+  text-align: center;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.input-label {
+  font-size: 14px;
+}
+
+.input-text {
+  font-size: 14px;
+  padding: 5px;
+  outline: none;
+}
+
+.password-eye {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+@media (max-width: 1340px) {
+  .layout-left {
+    width: 100%;
+  }
+
+  .layout-right {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* admin_affiliates screen main css */
+
+.editor-screen-main-layout-container {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  min-height: 80vh;
+}
+
+@media screen and (max-width: 768px) {
+  .editor-screen-main-layout-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+/* login pages css */
+
+.form-container {
+  width: 490px;
+  /* height: 400px; */
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fafafa;
+  padding: 3rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.heading-login {
+  text-align: center;
+  gap: 5px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 468px) {
+  .form-container {
+    width: 140px;
+    padding: 5px 14px 12px 14px;
+    gap: 5px;
+    border-radius: 0.1rem;
+  }
+
+  .page-background {
+    background-position: top !important;
+  }
+
+  .input-label {
+    font-size: 8px;
+    margin-bottom: -5px;
+    font-family: 'Franklin Gothic Medium';
+  }
+
+  .password-eye {
+    position: absolute;
+    top: 60%;
+    right: 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 8px;
+  }
+
+  .input-text {
+    font-size: 7px;
+    padding: 2px;
+    border-radius: 3px !important;
+  }
+
+  .heading-login {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .form-group input {
+    padding: 3px;
+    font-size: 8px;
+  }
+
+  .btn-info {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 1px;
+    font-size: 8px;
+    border-radius: 3px;
+  }
+}
+
+/* errors */
+
+.input-error {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-left: 4px;
+  margin-bottom: 0px;
+}
+
+.input-error-container {
+  width: 100%;
+}
+
+/* header main */
+
+.responsive-container {
+  width: 85%;
+  margin: 1rem auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .responsive-container {
+    width: 100%;
+  }
+}
+
+.page-background {
+  background-image: url("./assets/TRUMP.png");
+  background-size: 150% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+
+.client-dashboard-bg {
+  background-image: url("./assets/bgtower.jpg");
+  background-size: cover;
+  background-position: center -100px;
+  /* Moved up by 100px, adjust this value as needed */
+  background-repeat: repeat-y;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+
+
+/* For screens 1440px and above */
+@media screen and (min-width: 1440px) {
+  .client-dashboard-bg {
+    background-position: center -108px;
+  }
+}
+
+
+/* For screens 3840px and above (4K/UHD) */
+@media screen and (min-width: 3840px) {
+  .client-dashboard-bg {
+    background-position: center -280px;
+  }
+}
+
+/* .client-dashboard-bg {
+  background-image: url('./assets/bgtower.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+
+} */
+/* 
+@media screen and (max-width: 768px) {
+  .page-background {
+    align-items: center;
+    background-image: url("./assets/TRUMP.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+  }
+} */
+/* ... */

@@ -1,0 +1,92 @@
+.transaction-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002147;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 20px;
+}
+
+.transaction-left {
+  flex: 1 1 300px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.transaction-right {
+  flex: 2 1 500px;
+  min-width: 320px;
+  height: 350px;
+}
+
+.org-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: gold;
+  margin: 0;
+  text-align: center;
+}
+
+.org-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #FFD700;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .transaction-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .transaction-left,
+  .transaction-right {
+    flex: none;
+    width: 100%;
+    min-width: unset;
+  }
+
+  .transaction-right {
+    height: 300px; /* reduce chart height for tablets */
+  }
+
+  .org-title {
+    font-size: 1.75rem;
+  }
+
+  .org-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .transaction-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .transaction-right {
+    height: 250px; /* reduce chart height for mobile */
+  }
+
+  .org-title {
+    font-size: 1.5rem;
+  }
+
+  .org-subtitle {
+    font-size: 1rem;
+  }
+}

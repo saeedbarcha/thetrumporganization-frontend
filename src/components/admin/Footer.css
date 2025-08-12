@@ -1,0 +1,22 @@
+/* Add this to ensure content isn't hidden behind the footer */
+
+
+.footer-last-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #002147;
+    height: max-content;
+    padding: 0.5rem;
+    margin-top: auto;
+}
+
+
+@media screen and (max-width: 361px) {
+
+    p{
+        font-size: 10px;
+    }
+
+}

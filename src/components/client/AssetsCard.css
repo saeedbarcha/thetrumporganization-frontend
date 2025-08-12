@@ -1,0 +1,108 @@
+/* ---------- layout ---------- */
+.assets-container {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 30px; */
+  flex-wrap: wrap;
+  gap: 20px;
+  /* background-color: #fff; */
+  border-radius: 1rem;
+}
+
+
+
+/* ---------- card ---------- */
+.assets-card-wrapper {
+  cursor: zoom-in;
+  border: none;              /* remove default .card border */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease-in-out;
+}
+.assets-card-wrapper:hover {
+  transform: translateY(-4px);
+}
+
+/* Card image scaled + centered */
+.assets-card-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;       /* keeps aspect ratio */
+  /* */
+  border-radius: 4px;
+}
+
+/* Optional shine for TRUMP_CARD (simple overlay) */
+/* ---------- modal ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  padding: 1.5rem;
+  /* background: #fff; */
+  border-radius: 8px;
+      align-items: center;
+
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* -------- TRUMP_CERTIFICATE half‑size on ≥ lg -------- */
+@media (min-width: 992px) {
+  .certificate-card {
+    width: 50%;     /* takes 50 % of the row */
+  }
+  .certificate-card .assets-card-img {
+    width: 100%;    /* keeps full width inside wrapper */
+    height: auto;   /* auto height preserves aspect ratio,
+                       so visual height will also be ~50 % */
+  }
+}
+
+/* --------------------------------------------------------------------
+   MODAL – make each document type a different size only INSIDE the modal
+   -------------------------------------------------------------------- */
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 80vw;     /* sensible default for most */
+  max-height: 80vh;
+}
+
+/* ≥ lg (992 px) we fine‑tune each doc type */
+@media (min-width: 992px) {
+  .modal-img-card       { max-width: 45vw; } /* credit‑card style */
+  .modal-img-agreement  { max-width: 65vw; } /* letter / agreement */
+  .modal-img-certificate{ max-width: 50vw; } /* certificate smaller */
+}
